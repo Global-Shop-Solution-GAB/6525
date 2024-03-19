@@ -1,0 +1,36 @@
+﻿Program.Sub.Preflight.Start
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+v.Local.bExists.Declare
+v.Local.sFile.Declare
+v.Local.sFilename.Declare
+v.Local.sToday.Declare
+v.Local.sUser.Declare
+v.Local.sJob.Declare
+v.Local.sSuffix.Declare
+
+'If it is WO > Open ===== '1'
+'If it is WO > New ====== '2'
+F.Intrinsic.Control.If(v.Caller.Switches,=,"2")
+	'Quote Post Save hook
+	F.Intrinsic.Control.If(v.Caller.Hook,=,16800)
+		'Update the reference file in temp GSS folder with the Work Order No
+		v.Local.sUser.Set(v.Caller.User.Trim)
+		F.Intrinsic.String.Format(v.Ambient.Date,"YYYYMMDD",v.Local.sToday)
+		F.Intrinsic.String.Build("{0}\GAB_6525_WO_{1}_{2}.txt",v.Caller.LocalGSSTempDir,v.Local.sUser,v.Local.sToday,v.Local.sFilename)
+		F.Intrinsic.File.Exists(v.Local.sFilename,v.Local.bExists)
+		F.Intrinsic.Control.If(v.Local.bExists)
+			v.Local.sJob.Set(v.Passed.009000)
+			v.Local.sSuffix.Set(v.Passed.009001)
+			F.Intrinsic.String.Concat(v.Local.sJob,"*!*",v.Local.sSuffix,v.Local.sFile)
+			F.Intrinsic.File.String2File(v.Local.sFilename,v.Local.sFile)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+Program.Sub.Main.End
+
+Program.Sub.Comments.Start
+${$5$}$3.0.0.0$}$1
+${$6$}$tdjohan$}$20220108112642743$}$8rAQhOSvlohpQhMDm1j544LwmwXnRbkhttvDj2cMP6fok/3V4i8PMXqvZp9970CwK+DmWaBPFkM=
+Program.Sub.Comments.End
