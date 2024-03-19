@@ -1,0 +1,5 @@
+Drawing for Project: %PDIF_DESCRIPTION%*!*Please find the attached drawing for:
+Project: %PDIF_DESCRIPTION%
+PO#: %CUSTPO%
+
+I am looking forward to your review on the drawing. 
