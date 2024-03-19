@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SyntaxEdit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <BorderStyle>None</BorderStyle>
+  <Pages>
+    <DefaultPage>
+      <Header>
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+      </Header>
+      <Footer>
+        <Offset>
+          <X>0</X>
+          <Y>0</Y>
+        </Offset>
+      </Footer>
+      <PageSize>
+        <Width>0</Width>
+        <Height>0</Height>
+      </PageSize>
+    </DefaultPage>
+  </Pages>
+  <DisplayStrings />
+  <Selection>
+    <SelectionRect>
+      <Location>
+        <X>0</X>
+        <Y>82</Y>
+      </Location>
+      <Size>
+        <Width>24</Width>
+        <Height>2</Height>
+      </Size>
+      <X>0</X>
+      <Y>82</Y>
+      <Width>24</Width>
+      <Height>2</Height>
+    </SelectionRect>
+    <Options>UseColors OverwriteBlocks SelectLineOnTripleClick CopyLineWhenEmpty SelectWordOnCtrlClick</Options>
+  </Selection>
+  <Gutter>
+    <LineNumbersForeColor>WindowText</LineNumbersForeColor>
+    <Options>PaintLineNumbers PaintBookMarks PaintLineModificators</Options>
+  </Gutter>
+  <Margin>
+    <Visible>false</Visible>
+  </Margin>
+  <LineStyles />
+  <LineSeparator />
+  <Printing>
+    <Footer>
+      <Offset>
+        <X>0</X>
+        <Y>0</Y>
+      </Offset>
+    </Footer>
+    <Header>
+      <Offset>
+        <X>0</X>
+        <Y>0</Y>
+      </Offset>
+    </Header>
+  </Printing>
+  <WhiteSpace />
+  <TextSource>
+    <Position>
+      <X>0</X>
+      <Y>82</Y>
+    </Position>
+    <Lexer>
+      <Scheme>
+        <Author>Quantum Whale, LLC.</Author>
+        <Copyright>Copyright (c) 2004 - 2014 Quantum Whale LLC.</Copyright>
+        <FileType>gas</FileType>
+        <Version>1.5</Version>
+        <Styles>
+          <Style>
+            <Name>idents</Name>
+            <ForeColor>ControlText</ForeColor>
+          </Style>
+          <Style>
+            <Name>numbers</Name>
+            <ForeColor>ControlText</ForeColor>
+          </Style>
+          <Style>
+            <Name>reswords</Name>
+            <ForeColor>Blue</ForeColor>
+          </Style>
+          <Style>
+            <Name>comments</Name>
+            <ForeColor>Green</ForeColor>
+            <PlainText>true</PlainText>
+          </Style>
+          <Style>
+            <Name>xmlcomments</Name>
+            <ForeColor>Gray</ForeColor>
+          </Style>
+          <Style>
+            <Name>symbols</Name>
+            <ForeColor>WindowText</ForeColor>
+          </Style>
+          <Style>
+            <Name>whitespace</Name>
+            <ForeColor>WindowText</ForeColor>
+          </Style>
+          <Style>
+            <Name>strings</Name>
+            <ForeColor>Maroon</ForeColor>
+            <PlainText>true</PlainText>
+          </Style>
+          <Style>
+            <Name>directives</Name>
+            <ForeColor>Blue</ForeColor>
+          </Style>
+          <Style>
+            <Name>htmlparams</Name>
+            <ForeColor>Red</ForeColor>
+          </Style>
+          <Style>
+            <Name>syntax errors</Name>
+            <ForeColor>Red</ForeColor>
+          </Style>
+          <Style>
+            <Name>codes nippets</Name>
+            <ForeColor>Black</ForeColor>
+            <BackColor>255:180:228:180</BackColor>
+          </Style>
+          <Style>
+            <Name>GabReservedWords</Name>
+            <ForeColor>Blue</ForeColor>
+          </Style>
+          <Style>
+            <Name>GabTokenWithBrackets</Name>
+            <ForeColor>Gray</ForeColor>
+          </Style>
+          <Style>
+            <Name>GabFunctionIntrinsicDebug</Name>
+            <ForeColor>White</ForeColor>
+            <BackColor>Red</BackColor>
+            <FontStyle>Bold</FontStyle>
+            <PlainText>true</PlainText>
+          </Style>
+          <Style>
+            <Name>GabVariable</Name>
+            <ForeColor>Teal</ForeColor>
+          </Style>
+          <Style>
+            <Name>GabVariableSystemDefined</Name>
+            <ForeColor>Teal</ForeColor>
+            <FontStyle>Bold Italic</FontStyle>
+          </Style>
+          <Style>
+            <Name>GabGui</Name>
+            <ForeColor>OrangeRed</ForeColor>
+          </Style>
+          <Style>
+            <Name>GabProgramSubStartEnd</Name>
+            <ForeColor>Black</ForeColor>
+            <BackColor>LightGray</BackColor>
+            <FontStyle>Bold</FontStyle>
+            <PlainText>true</PlainText>
+          </Style>
+        </Styles>
+      </Scheme>
+    </Lexer>
+    <TextStrings>
+      <Lines>
+        <string>Program.Sub.Preflight.Start</string>
+        <string>Program.Sub.Preflight.End</string>
+        <string />
+        <string>Program.Sub.FormatBulk.Start</string>
+        <string>	f.Intrinsic.Control.Try</string>
+        <string>		v.Local..BulkDeclareString(sError,sColumns,sHold)</string>
+        <string>		v.Local..BulkDeclareLong(iCnt)</string>
+        <string />
+        <string>		f.Intrinsic.String.Split(v.Args.sInputColumns,",",v.Local.sColumns)</string>
+        <string>		f.Intrinsic.Control.For(v.Local.iCnt,0,v.Local.sColumns.UBound,1)</string>
+        <string>			F.Intrinsic.Control.SelectCase(v.Args.sProperty)</string>
+        <string>				F.Intrinsic.Control.Case("MinWidth")</string>
+        <string>					gui.[v.Args.FORM].[v.Args.GS].SetColumnProperty(v.Args.GV,v.Local.sColumns(v.Local.iCnt),"MinWidth",v.Args.sWidth)</string>
+        <string>				F.Intrinsic.Control.Case("MaxWidth")</string>
+        <string>					gui.[v.Args.FORM].[v.Args.GS].SetColumnProperty(v.Args.GV,v.Local.sColumns(v.Local.iCnt),"MaxWidth",v.Args.sWidth)</string>
+        <string>				F.Intrinsic.Control.Case("Width")</string>
+        <string>					gui.[v.Args.FORM].[v.Args.GS].SetColumnProperty(v.Args.GV,v.Local.sColumns(v.Local.iCnt),"Width",v.Args.sWidth)</string>
+        <string>				F.Intrinsic.Control.Case("Invisible")</string>
+        <string>					gui.[v.Args.FORM].[v.Args.GS].SetColumnProperty(v.Args.GV,v.Local.sColumns(v.Local.iCnt),"Visible",False)</string>
+        <string>				F.Intrinsic.Control.Case("VisibleIndex")</string>
+        <string>					gui.[v.Args.FORM].[v.Args.GS].SetColumnProperty(v.Args.GV,v.Local.sColumns(v.Local.iCnt),"VisibleIndex",v.Local.iCnt)</string>
+        <string>				F.Intrinsic.Control.Case("Caption")</string>
+        <string>					f.Intrinsic.String.Split(v.Local.sColumns(v.Local.iCnt),"@!@",v.Local.sHold)</string>
+        <string>					gui.[v.Args.FORM].[v.Args.GS].SetColumnProperty(v.Args.GV,v.Local.sHold(0),"Caption",v.Local.sHold(1))</string>
+        <string>				F.Intrinsic.Control.Case("HideCaption")</string>
+        <string>					gui.[v.Args.FORM].[v.Args.GS].SetColumnProperty(v.Args.GV,v.Local.sColumns(v.Local.iCnt),"Caption",False)</string>
+        <string>				F.Intrinsic.Control.Case("CellAllign_Far")</string>
+        <string>					gui.[v.Args.FORM].[v.Args.GS].SetColumnProperty(v.Args.GV,v.Local.sColumns(v.Local.iCnt),"CellHAlignment","Far")</string>
+        <string>				F.Intrinsic.Control.Case("CellAllign_Near")</string>
+        <string>					gui.[v.Args.FORM].[v.Args.GS].SetColumnProperty(v.Args.GV,v.Local.sColumns(v.Local.iCnt),"CellHAlignment","Near")</string>
+        <string>				F.Intrinsic.Control.Case("CellAllign_Center")</string>
+        <string>					gui.[v.Args.FORM].[v.Args.GS].SetColumnProperty(v.Args.GV,v.Local.sColumns(v.Local.iCnt),"CellHAlignment","Center")</string>
+        <string>				F.Intrinsic.Control.Case("HeaderAllign_Far")</string>
+        <string>					gui.[v.Args.FORM].[v.Args.GS].SetColumnProperty(v.Args.GV,v.Local.sColumns(v.Local.iCnt),"HeaderHAlignment","Far")</string>
+        <string>				F.Intrinsic.Control.Case("HeaderAllign_Center")</string>
+        <string>					gui.[v.Args.FORM].[v.Args.GS].SetColumnProperty(v.Args.GV,v.Local.sColumns(v.Local.iCnt),"HeaderHAlignment","Center")</string>
+        <string>				F.Intrinsic.Control.Case("HeaderFontBold")	</string>
+        <string>					gui.[v.Args.FORM].[v.Args.GS].SetColumnProperty(v.Args.GV,v.Local.sColumns(v.Local.iCnt),"HeaderFontBold",True)</string>
+        <string>				F.Intrinsic.Control.Case("Decimal_1")	</string>
+        <string>					gui.[v.Args.FORM].[v.Args.GS].SetColumnProperty(v.Args.GV,v.Local.sColumns(v.Local.iCnt),"DisplayCustomNumeric","###,###,###,##0.00")</string>
+        <string>				F.Intrinsic.Control.Case("Decimal_2")	</string>
+        <string>					gui.[v.Args.FORM].[v.Args.GS].SetColumnProperty(v.Args.GV,v.Local.sColumns(v.Local.iCnt),"DisplayCustomNumeric","###,###,###,##0.0000")</string>
+        <string>				F.Intrinsic.Control.Case("Integer")	</string>
+        <string>					gui.[v.Args.FORM].[v.Args.GS].SetColumnProperty(v.Args.GV,v.Local.sColumns(v.Local.iCnt),"DisplayCustomNumeric","###,###,###,##0")</string>
+        <string>				f.Intrinsic.Control.Case("For_CellValue_Changed")</string>
+        <string>					gui.[v.Args.FORM].[v.Args.GS].SetColumnProperty(v.Args.GV,v.Local.sColumns(v.Local.iCnt),"AllowEdit",True)	</string>
+        <string>					gui.[v.Args.FORM].[v.Args.GS].SetColumnProperty(v.Args.GV,v.Local.sColumns(v.Local.iCnt),"ReadOnly",False)</string>
+        <string>					gui.[v.Args.FORM].[v.Args.GS].SetColumnProperty(v.Args.GV,v.Local.sColumns(v.Local.iCnt),"CellBackColor","LightYellow")</string>
+        <string>				f.Intrinsic.Control.Case("For_RowCell_Click")</string>
+        <string>					gui.[v.Args.FORM].[v.Args.GS].SetColumnProperty(v.Args.GV,v.Local.sColumns(v.Local.iCnt),"AllowEdit",False)	</string>
+        <string>					gui.[v.Args.FORM].[v.Args.GS].SetColumnProperty(v.Args.GV,v.Local.sColumns(v.Local.iCnt),"ReadOnly",True)</string>
+        <string>				f.Intrinsic.Control.Case("FixedColumn_Left")</string>
+        <string>					gui.[v.Args.FORM].[v.Args.GS].SetColumnProperty(v.Args.GV,v.Local.sColumns(v.Local.iCnt),"Fixed","Left")</string>
+        <string>				f.Intrinsic.Control.Case("FixedColumn_Right")</string>
+        <string>					gui.[v.Args.FORM].[v.Args.GS].SetColumnProperty(v.Args.GV,v.Local.sColumns(v.Local.iCnt),"Fixed","Right")</string>
+        <string>				f.Intrinsic.Control.Case("FixedColumn_Right")</string>
+        <string>					gui.[v.Args.FORM].[v.Args.GS].SetColumnProperty(v.Args.GV,v.Local.sColumns(v.Local.iCnt),"Fixed","Right")</string>
+        <string>				f.Intrinsic.Control.Case("HeaderWordWrap")</string>
+        <string>					gui.[v.Args.FORM].[v.Args.GS].SetColumnProperty(v.Args.GV,v.Local.sColumns(v.Local.iCnt),"HeaderWordWrap","Wrap")	</string>
+        <string>	'				gui.[v.Args.FORM].[v.Args.GS].SetColumnProperty(v.Args.GV,v.Local.sColumns(v.Local.iCnt),"CellFontBold",True)</string>
+        <string>				f.Intrinsic.Control.Case("EditorButton")</string>
+        <string>					f.Intrinsic.String.Split(v.Local.sColumns(v.Local.iCnt),"@!@",v.Local.sHold)</string>
+        <string>					gui.[v.Args.FORM].[v.Args.GS].ColumnEdit(v.Args.GV,v.Local.sHold(0),"EditorButton",v.Local.sHold(1))	</string>
+        <string>					gui.[v.Args.FORM].[v.Args.GS].SetColumnProperty(v.Args.GV,v.Local.sHold(0),"ShowCaption",False)	</string>
+        <string>					gui.[v.Args.FORM].[v.Args.GS].SetColumnProperty(v.Args.GV,v.Local.sHold(0),"AllowEdit",False)	</string>
+        <string>					gui.[v.Args.FORM].[v.Args.GS].SetColumnProperty(v.Args.GV,v.Local.sHold(0),"CellBackColor",v.Color.LtGrey)	</string>
+        <string>				f.Intrinsic.Control.Case("IconBrowse")</string>
+        <string>					gui.[v.Args.FORM].[v.Args.GS].SetColumnProperty(v.Args.GV,v.Local.sColumns(v.Local.iCnt),"Icon","Browse")</string>
+        <string>				f.Intrinsic.Control.Case("Clickable")</string>
+        <string>					gui.[v.Args.FORM].[v.Args.GS].SetColumnProperty(v.Args.GV,v.Local.sColumns(v.Local.iCnt),"CellForeColor","Blue")	</string>
+        <string>				f.Intrinsic.Control.Case("DisplayCustomDateTime")</string>
+        <string>					gui.[v.Args.FORM].[v.Args.GS].SetColumnProperty(v.Args.GV,v.Local.sColumns(v.Local.iCnt),"DisplayCustomDateTime",V.Args.sDateTimeFormat)	</string>
+        <string>				F.Intrinsic.Control.EndSelect		</string>
+        <string>		f.Intrinsic.Control.Next(v.Local.iCnt)</string>
+        <string />
+        <string>	f.Intrinsic.Control.Catch</string>
+        <string>		f.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)</string>
+        <string>		f.Intrinsic.UI.Msgbox(V.Local.sError)	</string>
+        <string>		f.Intrinsic.Control.CallSub(v.Args.FORM_UNLOAD)</string>
+        <string>	f.Intrinsic.Control.EndTry</string>
+        <string>Program.Sub.FormatBulk.End</string>
+        <string />
+        <string>Program.Sub.Comments.Start</string>
+        <string>${$0$}$$}$$}$12:00:00 AM$}$False</string>
+        <string>Program.Sub.Comments.End</string>
+      </Lines>
+    </TextStrings>
+  </TextSource>
+  <Scrolling>
+    <WindowOriginY>34</WindowOriginY>
+    <Options>None</Options>
+  </Scrolling>
+  <Outlining>
+    <AllowOutlining>true</AllowOutlining>
+    <ImageSize>8</ImageSize>
+    <Ranges>
+      <Range>
+        <StartPoint>
+          <X>0</X>
+          <Y>0</Y>
+        </StartPoint>
+        <EndPoint>
+          <X>2147483647</X>
+          <Y>1</Y>
+        </EndPoint>
+        <Text>Program.Sub.Preflight</Text>
+        <DisplayText>Program.Sub.Preflight</DisplayText>
+        <Visible>false</Visible>
+        <Level>0</Level>
+      </Range>
+      <Range>
+        <StartPoint>
+          <X>0</X>
+          <Y>3</Y>
+        </StartPoint>
+        <EndPoint>
+          <X>2147483647</X>
+          <Y>80</Y>
+        </EndPoint>
+        <Text>Program.Sub.FormatBulk</Text>
+        <DisplayText>Program.Sub.FormatBulk</DisplayText>
+        <Visible>true</Visible>
+        <Level>0</Level>
+      </Range>
+      <Range>
+        <StartPoint>
+          <X>0</X>
+          <Y>82</Y>
+        </StartPoint>
+        <EndPoint>
+          <X>2147483647</X>
+          <Y>84</Y>
+        </EndPoint>
+        <Text>Program.Sub.Comments</Text>
+        <DisplayText>Program.Sub.Comments</DisplayText>
+        <Visible>false</Visible>
+        <Level>0</Level>
+      </Range>
+    </Ranges>
+  </Outlining>
+  <HyperText />
+  <Spelling />
+  <Braces />
+</SyntaxEdit>
