@@ -1,0 +1,38 @@
+﻿Program.Sub.Preflight.Start
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+v.Local.bExists.Declare
+v.Local.sFile.Declare
+v.Local.sFilename.Declare
+v.Local.sTempVal.Declare
+v.Local.sToday.Declare
+v.Local.sUser.Declare
+v.Local.sQuoteNo.Declare
+v.Local.sSalesOrderNo.Declare
+
+'Post Move Quote to Sales Order hook
+F.Intrinsic.Control.If(v.Caller.Hook,=,17301)
+	'Update the reference file in temp GSS folder with the Quote No
+	v.Local.sUser.Set(v.Caller.User.Trim)
+	F.Intrinsic.String.Format(v.Ambient.Date,"YYYYMMDD",v.Local.sToday)
+	F.Intrinsic.String.Build("{0}\GAB_6525_SO_{1}_{2}.txt",v.Caller.LocalGSSTempDir,v.Local.sUser,v.Local.sToday,v.Local.sFilename)
+	F.Intrinsic.File.Exists(v.Local.sFilename,v.Local.bExists)
+	F.Intrinsic.Control.If(v.Local.bExists)
+		v.Local.sQuoteNo.Set(v.Passed.QUOTE)
+		f.Intrinsic.String.LPad(v.Local.sQuoteNo,"0",7,v.Local.sQuoteNo)
+		
+		v.Local.sSalesOrderNo.Set(v.Passed.ORDER)
+		f.Intrinsic.String.LPad(v.Local.sSalesOrderNo,"0",7,v.Local.sSalesOrderNo)
+		
+		f.Intrinsic.String.Concat(v.Local.sSalesOrderNo,"*!*",v.Local.sQuoteNo,v.Local.sTempVal)		
+		F.Intrinsic.File.String2File(v.Local.sFilename,v.Local.sTempVal)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+Program.Sub.Main.End
+
+Program.Sub.Comments.Start
+${$5$}$3.0.0.0$}$1
+${$6$}$tdjohan$}$20220108104200869$}$8rAQhOSvlohpQhMDm1j544LwmwXnRbkhttvDj2cMP6f6Mb0QCrf5/M+p15hZxyXVF8hT+aOdC10=
+Program.Sub.Comments.End
